@@ -1,0 +1,36 @@
+<app-nav-bar></app-nav-bar>
+<br/>
+<app-side-bar></app-side-bar>
+<div class="container">    
+    <p-card header="Simple Card" [style]="{'width': '75%', 'margin-bottom': '2em'}" header="Hierarchy 1">
+                <label>3 Levels</label>
+                <p>
+                    <i class="pi pi-sync"></i>&nbsp;&nbsp;Update
+                    &nbsp;&nbsp;&nbsp;
+                    <i class="pi pi-file-export"></i>&nbsp;&nbsp;Export
+                </p>
+                <hr/>
+               
+                <p-tabView>
+                    <p-tabPanel header="View tree">
+                        <p-organizationChart [value]="data"></p-organizationChart>
+                     </p-tabPanel>
+                     <p-tabPanel header="Manage attributes">
+                        <p-button label="Edit"></p-button>
+<p>
+                        <p-accordion>
+                            <p-accordionTab header="Header 1">
+                               Content 1
+                            </p-accordionTab>
+                            <p-accordionTab header="Header 2">
+                                Content 2
+                            </p-accordionTab>
+                            <p-accordionTab header="Header 3">
+                                Content 3    
+                            </p-accordionTab>
+                        </p-accordion>
+                    </p>
+                     </p-tabPanel>
+                </p-tabView>
+    </p-card>    
+</div>

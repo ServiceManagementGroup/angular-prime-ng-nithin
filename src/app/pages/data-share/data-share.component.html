@@ -1,0 +1,10 @@
+<app-nav-bar></app-nav-bar>
+<br/>
+<app-side-bar></app-side-bar>
+<div class="flex flex-row flex-wrap">
+    <form [formGroup]="form">
+        <input type="text" pInputText placeholder="Search" (keyup)="applyFilter()" formControlName="dataFilter">
+    </form>
+</div>
+
+<app-data-list [dataFilter]="dataFilterVal"></app-data-list>

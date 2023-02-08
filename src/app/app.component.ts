@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingService } from './services/loading';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-poc-primeng';
+  
+  constructor(public loadingService: LoadingService) {
+
+  }
 }

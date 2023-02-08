@@ -1,0 +1,11 @@
+<div class="flex flex-row flex-wrap">
+    <p-card [header]="item.name" [style]="{width: '320px',margin:'15px'}" styleClass="shadow-2"
+        *ngFor="let item of products; index as i;">        
+        <p>{{item.price | currency}}</p>
+        <p>{{item.description}}
+        </p>
+        <ng-template pTemplate="footer">
+            <p-button label="Add to Cart" icon="pi pi-cart-plus" (onClick)="addToCart()"></p-button>
+        </ng-template>
+    </p-card>
+</div>

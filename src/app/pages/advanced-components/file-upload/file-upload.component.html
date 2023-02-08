@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+<br />
+<app-side-bar></app-side-bar>
+
+<section>
+    <h2>File Upload</h2>
+    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" >
+        <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+            </ul>
+        </ng-template>
+    </p-fileUpload>
+</section>
